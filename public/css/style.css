@@ -1,0 +1,554 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+h2{
+    font-size: 45px;
+}
+
+h4{
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+/* header */
+
+.banner-info h2{
+    font-size: 42px;
+}
+
+.banner-info h4{
+    font-size: 28px;
+}
+
+#header
+{
+    height: 56px;
+    padding: 0 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.logo
+{
+    padding: 0 24px;
+}
+
+.logo img{
+    position: absolute;
+    top: 10px;
+    left: 8%;
+    width: 32px;
+    height: 32px;
+}
+
+.name-brand
+{
+    font-size: 40px;
+    padding: 50px;
+}
+
+.border-left
+{
+    border-left: 2px solid #ccc;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+}
+
+#style-icon{
+    font-size: 35px;
+}
+
+#nav, .subnav, #nav-right
+{
+    list-style-type: none;
+}
+
+#nav
+{
+    margin: 0 200px;
+    padding: 0 8px;
+}
+
+#nav li, #nav-right li
+{
+    display: inline-block;
+    position: relative;
+}
+
+#nav li a, #nav-right li a
+{
+    color: #191919;
+    text-decoration: none;
+    line-height: 56px;
+    padding: 0 8px;
+}
+
+#nav > li:hover > a, #nav-right > li:hover > a
+{
+    border-bottom: 3px solid orange;
+    padding-bottom: 15px;
+}
+
+#nav .subnav
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    justify-content: center;
+    text-align: center;
+    background-color: #f3efef;
+    font-size: 16px;
+    z-index: +1;
+}
+#nav li:hover .subnav
+{
+    display: flex;
+    gap: 100px;
+}
+
+
+#nav .subnav a:hover
+{
+    color: orange;
+}
+
+#nav-right{
+    position: absolute;
+    right: 10%;
+    top: -10px;
+}
+
+#nav-right li
+{
+    margin: 0 15px;
+}
+
+
+#nav-right .subnav-right
+{
+    display: none;
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    background-color: #f3efef;
+    font-size: 16px;
+    border-radius: 10px;
+}
+#nav-right li:hover .subnav-right
+{
+    display: block;
+}
+
+#nav-right .subnav-right a:hover{
+    color: #ff6900;
+}
+
+/* #nav > li::before
+{
+    content: "";
+    display: block;
+    position: fixed;
+}
+
+#nav > li:hover::before
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+} */
+
+/* content/ main */
+
+
+.container{
+    display: flex;
+    margin: 15px 30px;
+}
+
+.banner-img{
+    height: 600px;
+    width: 100vw;
+    background-image: url(/public/img/POCO-C65.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.banner-info
+{
+    height: 520px;
+    width: 500px;
+    padding: 60px 0;
+    color: white;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.banner-info a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.banner-info span:hover
+{
+    background-color: #E1E1E1;
+}
+
+
+
+.button-banner-main
+{
+    font-size: 24px;
+    padding: 9px 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: #191919;
+    width: 100px;
+    height: 100px;
+}
+
+.black-background{
+    background-color: #191919;
+}
+
+.black-content
+{
+    color: #191919;
+}
+
+.banner-left
+{
+    position: relative;
+}
+
+.banner-right
+{
+    position: relative;
+}
+
+.subbanner-info, .subbanner-last-info
+{
+    height: 150px;
+    width: 500px;
+    margin: 20px 0;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.subbanner-info a, .subbanner-last-info a{
+    text-decoration: none;
+    font-size: 24px;
+    padding: 9px 30px;
+    border-radius: 10px;
+    color:#ff6900;
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+
+.subbanner-info a:hover, .subbanner-last-info a:hover{
+    text-decoration: underline;
+}
+
+.banner-right-last
+{
+    width: 900px;
+    position: relative;
+}
+
+.banner-img-last
+{
+    position: absolute;
+    right: 0;
+    width: 860px; 
+    height: 565px;
+}
+
+.subbanner-last-info
+{
+    width: 800px;
+    height: 565px;
+    position: absolute;
+    right: 0;
+    padding: 0px 67px;
+    margin: 0 0 48px;
+
+}
+
+.subbanner-last-info a
+{
+    color: black;
+}
+
+.button-swiper
+{
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    background: none;
+    margin: 50px;
+}
+
+/* footer */
+
+footer
+{
+    width: 100vw;
+    height: 453px;
+}
+
+.site-content
+{
+    width: 100%;
+    height: 100%;
+    background-color: #191919;
+}
+
+.site-container
+{
+    width: 80%;
+    height: 100% ;
+    margin: 0 200px;
+}
+
+.site-footer-main
+{
+    width: 100%;
+    height: 300px;
+    padding: 64px 0 0;
+    display: flex;
+}
+
+.column-selection
+{
+    color: white;
+    width: 33%;
+    height: 100%;
+}
+
+.column-selection h3{
+    margin: 0 0 16px;
+    font-size: 16px;
+}
+
+.column-selection-list
+{
+    list-style-type: none;
+}
+
+.column-selection-item
+{
+    margin: 0 0 16px;
+}
+
+.column-selection-item a
+{
+    color: #898989;
+    text-decoration: none;
+}
+
+.column-selection-item a:hover
+{
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-aside{
+    width: 400px;
+    height: 240px;
+}
+
+.footer-follow, .footer-connect{
+    color: white;
+    margin-bottom: 24px;
+}
+
+.footer-aside h3{
+    margin: 0 0 16px;
+    font-size: 16px;
+}
+
+.site-follow-list{
+    list-style-type: none;
+}
+
+
+.site-follow-item{
+    margin: 10px 16px 10px 0;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.site-follow-item a{
+    color: #898989;
+    text-decoration: none;
+}
+
+.site-follow-item a:hover{
+    color: white;
+}
+
+#email
+{
+    width: 406px;
+    height: 48px;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #898989;
+    border-radius: 10px;
+    padding-right: 42px;
+    padding-left: 16px;
+    background-color: #191919;
+}
+
+.button-email
+{
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: #898989;
+    position: relative;
+    left: 370px;
+    top: -40px;
+}
+
+.site-footer-footer{
+    width: 100%;
+    height: 90px;
+    margin-top: 64px;
+    padding: 24px 0 38px;
+    border-top: 1px solid #E1E1E1;
+    font-size: 16px;
+    color: white;
+    display: flex;
+}
+
+.footer-legal{
+    width: 380px;
+    height: 20px;
+    margin-right: 32px;
+}
+
+.site-footer-setting{
+    width: 1035px;
+    height: 30px;
+    display: flex;
+}
+
+.site-footer-sitemap{
+    width: 820px;
+    height: 20px;
+    margin-right: 32px;
+}
+
+.site-footer-sitemap a{
+    color: white;
+    text-decoration: none;
+}
+
+.site-footer-sitemap a:hover{
+    text-decoration: underline;
+}
+
+.site-footer-locale{
+    position: absolute;
+    right: 165px;
+}
+
+.site-footer-locale a{
+    text-decoration: none;
+    color: white;
+}
+
+.site-footer-locale a:hover{
+    text-decoration: underline;
+}
+
+.locale-link
+{
+    margin: 0 8px;
+}
+
+#t13-pro
+{
+    width: 925px;
+    height: 600px;
+    background-image: url(/public/img/xiaomi13T-pro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+#note12-pro
+{
+    width: 925px;
+    height: 600px;
+    background-image: url(/public/img/note12-pro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+#miband8
+{
+    width: 925px;
+    height: 600px;
+    background-image: url(/public/img/miband8.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: bottom;
+
+}
+
+#pad6
+{
+    width: 455px;
+    height: 595px;
+    background-image: url(/public/img/pad6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+#watch2pro
+{
+    width: 455px;
+    height: 595px;
+}

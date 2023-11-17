@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản Xiaomi - Đăng ký</title>
+    <link rel="icon" type="image/x-icon" href="/public/img/Xiaomi_logo.png">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/stylePhone.css">
+    <link rel="stylesheet" href="/public/css/smart-home.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f6a4a1ce59.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <main>
+        <div class="side-layout">
+            <div class="side-layout-img">
+            </div>
+        </div>
+
+        <div class="layout-container">
+            <div class="layout-nav">
+                <div class="mi-layout-title">
+                    <img src="/public/img/Xiaomi_logo.png" alt="" width="40px" height="40px">
+                    <div class="title">
+                        <span>Tài khoản Xiaomi</span>
+                    </div>
+                </div>
+                <div class="mi-nav">
+                    <a href="">Thỏa thuận Người dùng</a>
+                    <a href="">Chính sách Riêng tư</a>
+                    <a href="">Cần trợ giúp?</a>
+                    <a href="" id="border-side">Chọn ngôn ngữ của bạn</a>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="form-box">
+                    <div class="login-signin">
+                        <div class="login" style="border-bottom: none">
+                            <a href="login.html">Đăng Nhập</a>
+                        </div>
+                        <div class="signin" style="border-bottom: #ff6900 4px solid;">
+                            <a href="signin.html">Đăng ký</a>
+                        </div>
+                    </div>
+                    <div class="form-content">
+                        <div>
+                                <form action="">
+                                    <input type="text" id="user-name" placeholder="Email">
+                                    <input type="password" id="password" placeholder="Thiết lập mật khẩu">
+                                    <input type="password" id="re-password" placeholder="Nhập lại mật khẩu của bạn">
+                                    <input type="checkbox" id="show-pass" onclick="showPass()" style="cursor: pointer;">  <span>Hiển thị mật khẩu</span>
+                                    <input type="submit" class="button" value="Đăng ký" onclick="CheckInfo()">
+                                    <label for="">Mật khẩu phải có 8-16 ký tự và bao gồm cả số và chữ</label>
+                                </form>
+                        </div>
+                </div>
+            </div>
+            <div class="layout-copyright">
+                <span>Xiaomi Inc., Bản quyền đã được bảo hộ</span>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script>
+
+    function addData() {
+            var email = document.getElementById("user-name").value;
+            var pass = document.getElementById("password").value;
+
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPass", pass);
+
+        }
+
+        function checkPassword(password) {
+
+        if (password.length < 8 || password.length > 16) {
+            return false;
+        }
+
+        let hasLetter = false;
+        let hasNumber = false;
+
+        for (let i = 0; i < password.length; i++) {
+            if (password[i].match(/[a-zA-Z]/)) {
+            hasLetter = true;
+            } else if (password[i].match(/[0-9]/)) {
+            hasNumber = true;
+            }
+        }
+
+        if (!hasLetter || !hasNumber) {
+            return false;
+        }
+
+        return true;
+        }
+
+
+        function CheckInfo(){
+            var email = document.getElementById("user-name").value;
+            var pass = document.getElementById("password").value;
+            var confirm_password = document.getElementById("re-password").value;
+            if (!email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {
+                alert("Email không hợp lệ.");
+            }
+            else if (!checkPassword(pass)) {
+                window.location.href = "signin.html";
+                alert("Mật khẩu phải có 8-16 ký tự và bao gồm cả số và chữ");
+            }
+            else if (pass != confirm_password) {
+                window.location.href = "signin.html";
+                alert("Mật khẩu không khớp.");
+            }
+            else{
+                addData();
+                window.location.href = "login.html";
+                alert("Đăng ký thành công.");
+            }
+        }
+
+        function showPass(){
+            var pass = document.getElementById("password");
+            var cpass = document.getElementById("re-password");
+
+            if(pass.type == "password")
+            {
+                pass.type = "text";
+            }
+            else
+            {
+                pass.type = "password";
+            }
+            if(cpass.type == "password")
+            {
+                cpass.type = "text";
+            }
+            else
+            {
+                cpass.type = "password";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

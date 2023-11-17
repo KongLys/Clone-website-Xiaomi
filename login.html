@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản Xiaomi - Đăng nhập</title>    
+    <link rel="icon" type="image/x-icon" href="/public/img/Xiaomi_logo.png">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/stylePhone.css">
+    <link rel="stylesheet" href="/public/css/smart-home.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f6a4a1ce59.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <main>
+        <div class="side-layout">
+            <div class="side-layout-img">
+            </div>
+        </div>
+
+        <div class="layout-container">
+            <div class="layout-nav">
+                <div class="mi-layout-title">
+                    <img src="/public/img/Xiaomi_logo.png" alt="" width="40px" height="40px">
+                    <div class="title">
+                        <span>Tài khoản Xiaomi</span>
+                    </div>
+                </div>
+                <div class="mi-nav">
+                    <a href="">Thỏa thuận Người dùng</a>
+                    <a href="">Chính sách Riêng tư</a>
+                    <a href="">Cần trợ giúp?</a>
+                    <a href="" id="border-side">Chọn ngôn ngữ của bạn</a>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="form-box">
+                    <div class="login-signin">
+                        <div class="login">
+                            <a href="login.html">Đăng Nhập</a>
+                        </div>
+                        <div class="signin">
+                            <a href="signin.html">Đăng ký</a>
+                        </div>
+                    </div>
+                    
+                    <div class="form-content">
+                            <div>
+                                <form>
+                                    <input type="text" id="user-name" placeholder="Email">
+                                    <input type="password" id="password" placeholder="Mật khẩu">
+                                    <input type="checkbox" id="show-pass" onclick="showPass()" style="cursor: pointer;">  <span>Hiển thị mật khẩu</span>
+                                    <input type="button" class="button" value="Đăng nhập" onclick="checkData()">
+                                </form>
+                            </div>
+                        <div class="logo-google">
+                            <a href="https://www.google.com/account/about/">
+                                <i class="fab fa-google"></i>
+                                <span>Đăng nhập bằng google</span>
+                            </a>
+                        </div>
+                        <div class="forget-pass">
+                            <a href="https://account.xiaomi.com/fe/service/forgetPassword?_bannerBiz=&sid=mi_overseavn&callback=https%3A%2F%2Fbuy.mi.com%2Fvn%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252Fvn%26sign%3DZmJjMTE3ZTJiZTljNjI4ODgxZDc1YTY5N2Y2MThhYzJkODhiYWM2ZA%2C%2C&qs=&_locale=vi_VN">Quên mật khẩu?</a>
+                        </div>
+                        <div class="more-option">
+                            <span>Thêm tùy chọn</span>
+                        </div>
+                        <div class="logo-face">
+                            <a href="https://m.facebook.com/login/?locale=vi_VN&refsrc=deprecated"><i class="fab fa-facebook"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layout-copyright">
+                <span>Xiaomi Inc., Bản quyền đã được bảo hộ</span>
+            </div>
+        </div>
+
+
+    </main>
+    <script>
+        function checkData(){
+            var enterEmail = document.getElementById("user-name").value;
+            var enterPass = document.getElementById("password").value;
+
+            var getEmail = localStorage.getItem("userEmail");
+            var getPass = localStorage.getItem("userPass");
+
+            if(enterEmail == getEmail)
+            {
+                if(enterPass == getPass)
+                {
+                    alert("Đăng nhập thành công");
+                }
+                else
+                {
+                    alert("Mật khẩu không hợp lệ");
+                }
+            }
+            else
+            {
+                alert("Không tồn tại tài khoản");
+            }
+        }
+
+        function showPass(){
+            var pass = document.getElementById("password");
+
+            if(pass.type == "password")
+            {
+                pass.type = "text";
+            }
+            else
+            {
+                pass.type = "password";
+            }
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+main
+{
+    position: relative;
+    top: 60px;
+}
+.banner-text-box
+{
+    width: 100vw;
+    height: 145px;
+    position: relative;
+}
+.banner-text{
+    font-size: 36px;
+    line-height: 145px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.support-button-box{
+    width: 100%;
+    height: 140px;
+    position: relative;
+}
+
+.support-button-list{
+    width: 1260px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.button-bar
+{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.support-button-item{
+    width: 294px;
+    height: 58px;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.support-button-item a{
+    text-decoration: none;
+    color: #191919;
+}
+
+.support-button-item a:hover{
+    color: #ff6900;
+}
+
+.support-button-wrapper-box{
+    width: 100vw;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.support-button-wrapper{
+    width: 733px;
+    height: 100%;
+    position: relative;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.support-button-tile{
+    font-size: 27px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+    width: 550px;
+}
+
+.support-button-tile a{
+    text-decoration: none;
+    color: #191919;
+    font-weight: bold;
+}
+
+.support-button-tile a:hover{
+    text-decoration: underline;
+}
+
+.support-button-subtile{
+    font-size: 18px;
+    color: #898989;
+    margin: 6px 0 0;
+
+}
+
+.support-button-wrapper-haft
+{
+    width: 622px;
+    height: 100%;
+    padding: 0 60px;
+    position: relative;
+}
+
+.side-img
+{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.support-article-tag{
+    border-radius: 10px;
+    border: #50c050 1px solid;
+    color: #50c050;
+    width: 92px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+.contact-box{
+    width: 630px;
+    height: 250px;
+    padding: 36px 80px;
+    position: relative;
+}
+
+.contact-title{
+    width: auto;
+    height: 32px;
+    font-size: 27px;
+    color: #191919;
+    font-weight: bold;
+    margin: 0 0 18px;
+}
+
+.contact-title a{
+    text-decoration: none;
+    color: #191919;
+}
+
+.contact-title a:hover{
+    text-decoration: underline;
+}
+
+.contact-title table{
+    font-size: 18px;
+    margin: 18px 0 0;
+}
+
+.contact-title td
+{
+    font-weight: normal;
+    width: 235px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.contact-title td a{
+    color: #898889;
+}
+
+.contact-title td a:hover{
+    text-decoration: none;
+    color: #ff6900;
+}
+
+.contact-list{
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 18px;
+    color: #898889;
+    margin: 10px 0 0 0;
+}
+
+.contact-item{
+    margin: 0 0 18px;
+}
+
+.contact-item a{
+    color: #898889;
+}
+
+.contact-item a:hover
+{
+    color: #ff6900; 
+}
+
+
+.faq-container{
+    width: 100vw;
+    height: 390px;
+    position: relative;
+}
+
+.faq-box{
+    width: 1260px;
+    height: 100%;
+    padding: 40px 80px;
+    margin: 5px 0 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.faq-top{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.faq-top h2{
+    font-size: 27px;
+    margin-top: 22px;
+}
+
+.faq-top a{
+    margin: 10px 0 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ff6900;
+}
+
+.faq-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-content a{
+    color: #898989;
+    text-decoration: none;
+    margin: 10px 0 0 ;
+    font-size: 18px;
+}
+
+.faq-content a:hover{
+    color: #191919;
+}
+
+.store-title{
+    font-size: 28px;
+}
