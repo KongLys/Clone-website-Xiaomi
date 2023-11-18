@@ -48,7 +48,12 @@
                     <div class="form-content">
                         <div>
                                 <form action="">
-                                    <input type="text" id="user-name" placeholder="Email">
+                                    <select name="" id="" class="address">
+                                        <option value="" class="address-option">Thành phố Hồ Chí Minh</option>
+                                        <option value="">Hà Nội</option>
+                                        <option value="">Đà Nẵng</option>
+                                    </select>
+                                    <input type="text" id="user-name" placeholder="Email"> <p id=" "></p>
                                     <input type="password" id="password" placeholder="Thiết lập mật khẩu">
                                     <input type="password" id="re-password" placeholder="Nhập lại mật khẩu của bạn">
                                     <input type="checkbox" id="show-pass" onclick="showPass()" style="cursor: pointer;">  <span>Hiển thị mật khẩu</span>
@@ -107,7 +112,7 @@
             var pass = document.getElementById("password").value;
             var confirm_password = document.getElementById("re-password").value;
             if (!email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {
-                alert("Email không hợp lệ.");
+                document.getElementById("aler").innerHTML("Email không hợp lệ");
             }
             else if (!checkPassword(pass)) {
                 window.location.href = "signin.html";
