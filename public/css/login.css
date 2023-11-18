@@ -5,6 +5,7 @@
 
 .side-layout-img{
     background-image: url(/public/img/layout-cut.png);
+    background-size: 380px 1100px;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
