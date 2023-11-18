@@ -46,7 +46,7 @@
 
 
 .banner{
-    background-image: url(./public/img/t13.png);
+    background-image: url(../img/t13.png);
     width: 100vw;
     height: 600px;
     background-size: cover;
@@ -184,12 +184,12 @@
 
 #redmi-note-12-pro
 {
-    background-image: url(./public/img/redmi-note-12-pro-fullphone.png);
+    background-image: url(../img/redmi-note-12-pro-fullphone.png);
 }
 
 #poco-c65
 {
-    background-image: url(./public/img/POCO-C65.png);
+    background-image: url(../img/POCO-C65.png);
 }
 
 /* footer */
