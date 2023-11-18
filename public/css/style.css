@@ -195,7 +195,7 @@ h4{
 .banner-img{
     height: 600px;
     width: 100vw;
-    background-image: url(/public/img/POCO-C65.png);
+    background-image: url(./public/img/POCO-C65.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -507,7 +507,7 @@ footer
 {
     width: 925px;
     height: 600px;
-    background-image: url(/public/img/xiaomi13T-pro.png);
+    background-image: url(./public/img/xiaomi13T-pro.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -518,7 +518,7 @@ footer
 {
     width: 925px;
     height: 600px;
-    background-image: url(/public/img/note12-pro.png);
+    background-image: url(./public/img/note12-pro.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -529,7 +529,7 @@ footer
 {
     width: 925px;
     height: 600px;
-    background-image: url(/public/img/miband8.png);
+    background-image: url(./public/img/miband8.png);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: bottom;
@@ -540,7 +540,7 @@ footer
 {
     width: 455px;
     height: 595px;
-    background-image: url(/public/img/pad6.png);
+    background-image: url(./public/img/pad6.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
