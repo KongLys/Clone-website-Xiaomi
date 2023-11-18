@@ -51,7 +51,8 @@
     height: 600px;
     background-size: cover;
     position: relative;
-    top:56px
+    top:56px;
+    z-index: 1;
 }
 
 .list-banner
